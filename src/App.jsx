@@ -1,14 +1,124 @@
-import Card from './components/card'
+import Card from './components/Card'
+ 
+ const App = () => {
+  const jobOpenings = [
+  {
+    brandLogo: "https://logo.clearbit.com/google.com",
+    companyName: "Google",
+    datePosted: "5 days ago",
+    post: "Frontend Developer",
+    tag1: "Full-time",
+    tag2: "Junior Level",
+    pay: "$58/hr",
+    location: "Mountain View, USA"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/meta.com",
+    companyName: "Meta",
+    datePosted: "10 weeks ago",
+    post: "React Native Engineer",
+    tag1: "Full-time",
+    tag2: "Senior Level",
+    pay: "$72/hr",
+    location: "Menlo Park, USA"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/amazon.com",
+    companyName: "Amazon",
+    datePosted: "2 days ago",
+    post: "Backend Engineer",
+    tag1: "Part-time",
+    tag2: "Junior Level",
+    pay: "$48/hr",
+    location: "Hyderabad, India"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/apple.com",
+    companyName: "Apple",
+    datePosted: "3 weeks ago",
+    post: "iOS Developer",
+    tag1: "Full-time",
+    tag2: "Senior Level",
+    pay: "$80/hr",
+    location: "Cupertino, USA"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/netflix.com",
+    companyName: "Netflix",
+    datePosted: "1 week ago",
+    post: "UI/UX Engineer",
+    tag1: "Full-time",
+    tag2: "Junior Level",
+    pay: "$65/hr",
+    location: "Los Gatos, USA"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/tesla.com",
+    companyName: "Tesla",
+    datePosted: "4 days ago",
+    post: "Software Engineer",
+    tag1: "Full-time",
+    tag2: "Senior Level",
+    pay: "$75/hr",
+    location: "Austin, USA"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/microsoft.com",
+    companyName: "Microsoft",
+    datePosted: "6 weeks ago",
+    post: "Cloud Engineer",
+    tag1: "Part-time",
+    tag2: "Senior Level",
+    pay: "$62/hr",
+    location: "Redmond, USA"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/oracle.com",
+    companyName: "Oracle",
+    datePosted: "9 days ago",
+    post: "Database Administrator",
+    tag1: "Full-time",
+    tag2: "Junior Level",
+    pay: "$55/hr",
+    location: "Bangalore, India"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/openai.com",
+    companyName: "OpenAI",
+    datePosted: "12 days ago",
+    post: "AI Research Engineer",
+    tag1: "Full-time",
+    tag2: "Senior Level",
+    pay: "$95/hr",
+    location: "San Francisco, USA"
+  },
+  {
+    brandLogo: "https://logo.clearbit.com/nvidia.com",
+    companyName: "NVIDIA",
+    datePosted: "7 weeks ago",
+    post: "Machine Learning Engineer",
+    tag1: "Full-time",
+    tag2: "Junior Level",
+    pay: "$70/hr",
+    location: "Mumbai, India"
+  }
+];
+console.log(jobOpenings);
 
-const App = () => {
-  return (
-    <div className='parent'>
-      <Card user='Abishek' age={21} img='https://images.unsplash.com/photo-1764767168158-9f05d34e3881?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMTh8fHxlbnwwfHx8fHw%3D' />
-      <Card user='Hari' age={22} img='https://plus.unsplash.com/premium_photo-1764536654639-8c69698fabf9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMTd8fHxlbnwwfHx8fHw%3D' />
-      <Card user='Bishal' age={23} img='https://images.unsplash.com/photo-1764708844823-00d2188dafd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNTJ8fHxlbnwwfHx8fHw%3D' />
-    </div>
-  )
-}
 
-export default App
+   return (
+     <div className='parent'>
+       {jobOpenings.map(function(elem,idx){
+        return <div key={idx}>
+          <Card company={elem.companyName} post={elem.post}/>
+        </div>
+        
+       })}
+     </div>
+   )
+ }
+ 
+ export default App
+ 
+
 
