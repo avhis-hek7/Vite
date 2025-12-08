@@ -1,11 +1,9 @@
-
-const App = () => {
+import Card from './component/card'
+function App() {
   return (
-    <>
-      <div className="class">Yes sir</div>
-      <div className="bench">NO</div>
-
-    </>
+    <div>
+      <Card />
+    </div>
   )
 }
 
